@@ -1,0 +1,25 @@
+<div class="container">
+  
+  <div class="loginTitle">Login here</div>
+<div class="loginTitleBottomBorder"></div>
+<br>
+<% if(messages.error){ %>
+  <span class="login_error_message"> <%= messages.error %> </span><br>
+  <% } %> 
+  <form action="/userLogin" method="POST" class="form-group">
+
+  
+  <label for="email">Email:</label>
+  <input id="email" class="form-control" name="email" placeholder="xyz@gmail.com">
+  <br>
+  <label for="phone">Phone Number:</label>
+  <input id="phone" class="form-control" name="phone" placeholder="*********" >
+  <br>
+  <button class="btn  btn-lg btn-block loginBtn" style="border: 1px solid orangered;
+  background: white;
+  color: orangered;
+  border-radius: 20px;" type="submit">Submit</button>
+</form>
+
+</div>
+

@@ -1,0 +1,78 @@
+<% if(session.cart) {%>
+<div class="cart-container">
+
+    <div class="cart-title">
+        <img class="cart-img" src="https://img.icons8.com/carbon-copy/100/000000/shopping-cart.png" /> <span
+            class="order_summary" style="
+            font-size: 1.4vw;"> Order summary </span>
+    </div>
+</div>
+<!-- main section start   -->
+<div style="
+        max-width: 82rem;
+        text-align: center; 
+        border-bottom:1px solid black;
+        border-radius:10px;" class="container cart-flex-container">
+    <% for(let pizza of Object.values(session.cart.items)) { %>
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-sd-3 col-xs-3 ">
+            <img src="/img/<%= pizza.item.image %>" width="100" height="auto" alt="">
+        </div>
+        <div class="col-md-3 col-lg-3 col-sd-3 col-xs-3">
+            <%= pizza.item.name %>
+        </div>
+
+
+        <div class="col-md-3 col-lg-3 col-sd-3 col-xs-3">
+            <%= pizza.qty %> &nbsp;Pcs
+        </div>
+        <div class="col-md-3 col-lg-3 col-sd-3 col-xs-3">
+            <%= pizza.item.price *  pizza.qty%>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sd-3 col-xs-3">
+            <%= pizza.item.size %>
+        </div>
+    </div>
+
+    <% } %>
+</div>
+<div class="totalColumn container-small" style="
+    max-width: 67rem;
+    margin: 0 auto;
+    font-size: x-large;
+    
+    ">
+    <div class="col-md-10 col-sm-10 col-lg-10 col-xs-10" style="color:orangered">Total Amount:</div>
+    <div class="col-md-2 col-sm-2 col-lg-2 col-xs-2 totalAmount"><%= session.cart.totalAmount %></div>
+    <% if(session.loginUser_id != undefined){%>
+    <% if(messages.error){  %> 
+
+    <span> <%= messages.error %> </span><br>
+    <% } %>
+    <% if(messages.success){  %>
+    <span class="order-success"> <%= messages.success %> </span><br>
+    <a href="/myOrder">Check Your Order Status</a>
+    <% } %>
+    <form action="order" method="POST" class="form-group cart-form-group">
+        <input type="number" name="phone" class="form-control" placeholder="96********62">
+        <input type="email" name="email" class="form-control" placeholder="xyz@gmail.com">
+        <button class=" btn-lg btn-block order-btn-submit" style="
+        background: transparent;
+        border: 1px solid orangered;
+        color: orangered;
+        margin-top: 1rem;">Order Now </button>
+    </form>
+    <%} else { %>
+    <a style="text-decoration: none;" href="/login">Login to Continue </a>
+
+    <%}%>
+
+</div>
+<% } else { %>
+    <div class="container" style="width:50%;margin:0px auto;">
+
+        <div class="cart-empty">Cart empty please order some thing </div>
+        <img src="/img/empty_cart.jpeg" class="img-fluid emptyCartImage"><br>
+        <a href="/" class="linkToHomePage">Go to Home Page</a>
+    </div>
+        <% } %>

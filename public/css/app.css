@@ -1,0 +1,762 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);* {
+  margin: 0px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: black;
+}
+
+nav li a {
+  transition: all 0.3s ease-in-out;
+}
+
+nav li a:hover {
+  color: #FE5F1E;
+}
+
+button:focus {
+  outline: none;
+}
+
+.bg-transparent {
+  border: 1px solid #FE5F1E;
+  color: #FE5F1E;
+  transition: all 0.3s ease-in-out;
+}
+
+.bg-transparent:hover {
+  background: #FE5F1E;
+  color: #fff;
+  border: #fff;
+}
+
+section div img {
+  height: 35rem;
+}
+
+section.hero {
+  background: #f8f8f8;
+}
+
+.size {
+  background: #f8f8f8;
+}
+
+.add-to-cart {
+  border: 2px solid #FE5F1E;
+  color: #FE5F1E;
+  transition: all 0.3s ease-in-out;
+}
+
+.add-to-cart:hover {
+  background: #FE5F1E;
+  border-color: #fff;
+  color: #fff;
+}
+
+.btn-primary {
+  border: 1px solid #FE5F1E;
+  color: #FE5F1E;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: #FE5F1E;
+  color: white;
+}
+
+section.cart {
+  background: #f8f8f8;
+}
+
+.totalAmount {
+  color: #FE5F1E;
+}
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.mt-3 {
+  border: 1px solid #FE5F1E;
+  background: #f8f8f8;
+  color: #FE5F1E;
+}
+
+.mt-3::hover,
+.mt-3:focus {
+  border: none;
+  color: #f8f8f8;
+  background: green;
+}
+
+section.login img,
+section.regi img {
+  height: 24rem;
+  width: 100%;
+}
+
+section.login .mb-4 {
+  padding-top: 39px;
+}
+
+section.login .hurryUp {
+  position: absolute;
+  margin-left: 16rem;
+  color: white;
+  font-size: 26px;
+}
+
+section.regi .regiArea {
+  color: #FE5F1E;
+}
+
+section.regi .signUpBtn {
+  background: #f8f8f8;
+  color: #FE5F1E;
+  border: 1px solid #FE5F1E;
+  transition: all 0.3s ease-in-out;
+}
+
+section.regi .signUpBtn:hover {
+  background: #b23301;
+  color: #f8f8f8;
+}
+
+.haveAnAccount,
+.frgtPasswrd {
+  color: #FE5F1E;
+  font-size: 13px;
+}
+
+.haveAnAccount:hover,
+.frgtPasswrd:hover {
+  color: #b23301;
+}
+
+/* Add a black background color to the top navigation */
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: white;
+  color: #FE5F1E;
+}
+
+/* Add an active class to highlight the current page */
+
+.topnav a.active {
+  background-color: #FE5F1E;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+
+.topnav .icon {
+  display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+html {
+  background-color: #eaf0f2;
+}
+
+body {
+  font: 16px/1.6 Arial, sans-serif;
+}
+
+header {
+  text-align: center;
+  padding-top: 100px;
+  margin-bottom: 190px;
+}
+
+header h1 {
+  font: normal 32px/1.5 "Open Sans", sans-serif;
+  color: #3F71AE;
+  padding-bottom: 16px;
+}
+
+header h2 {
+  color: #F05283;
+}
+
+header span {
+  color: #3F71EA;
+}
+
+/* The footer is fixed to the bottom of the page */
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+@media (max-height: 800px) {
+  footer {
+    position: static;
+  }
+
+  header {
+    padding-top: 40px;
+  }
+}
+
+.footer-distributed {
+  background-color: #2c292f;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 50px 50px 60px 50px;
+  margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+  width: 30%;
+}
+
+.footer-distributed h3 {
+  color: #ffffff;
+  font: normal 36px "Cookie", cursive;
+  margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img {
+  width: 30%;
+}
+
+.footer-distributed h3 span {
+  color: #FE5F1E;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+  color: #ffffff;
+  margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+  width: 35%;
+}
+
+.footer-distributed .footer-center i {
+  background-color: #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+  color: #FE5F1E;
+  text-decoration: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+  width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* Here is the code for Responsive Footer */
+
+/* You can remove below code if you don't want Footer to be responsive */
+
+@media (max-width: 880px) {
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i {
+    margin-left: 0;
+  }
+}
+
+.loginTitle {
+  font-size: 4vh;
+  margin-top: 6rem;
+  color: #FE5F1E;
+}
+
+.titleImg {
+  max-width: 82%;
+  display: block;
+  height: auto;
+}
+
+.orderBtn {
+  background: white;
+  border: 1px solid #FE5F1E;
+  color: #FE5F1E;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  border-radius: 26px;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.3vw;
+}
+
+.orderBtn:hover,
+.orderBtn:focus {
+  outline: none;
+  background: #FE5F1E;
+  color: #fff;
+}
+
+.hungry {
+  margin-top: 18rem;
+  color: orangered;
+  font-size: 3vw;
+}
+
+.dontWait {
+  font-size: 2.5vw;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.flex-item-right {
+  width: 21vw;
+}
+
+.flex-item-right p {
+  text-align: center;
+}
+
+.add_to_cart {
+  float: right;
+  border: 1px solid #FE5F1E;
+  padding: 5px;
+  border-radius: 29px;
+  background: #fff;
+  color: #FE5F1E;
+  transition: all 0.3s ease-in-out;
+}
+
+.add_to_cart:hover {
+  outline: none;
+  background: #FE5F1E;
+  color: #fff;
+}
+
+.item_add_to_cart_error {
+  border: 1px solid #7c1616;
+  width: 11%;
+  margin-left: 1rem;
+  border-radius: 10px;
+  padding: 6px;
+  padding-left: 13px;
+  color: white;
+  font-weight: 600;
+  background: #7c1616;
+  letter-spacing: 2px;
+}
+
+.item_add_to_cart {
+  border: 1px solid orangered;
+  color: white;
+  background: orangered;
+  padding: 5px;
+  border-radius: 10px;
+  width: 11%;
+  padding-left: 28px;
+  margin-left: 1rem;
+}
+
+.cart-title {
+  width: 50%;
+  margin: 0px auto;
+  margin-top: 5rem;
+}
+
+.cart-form-group {
+  width: 34%;
+}
+
+.cart-img {
+  width: auto;
+  height: 6rem;
+}
+
+.cart-empty {
+  font-size: 2vw;
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.emptyCartImage {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+.linkToHomePage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+}
+
+@media (min-width: 992px) and (max-width: 1224px) {
+  .orderBtn {
+    padding: 4px;
+    border-radius: 3px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 992px) {
+  .cart-empty {
+    font-size: 4vw;
+  }
+
+  .linkToHomePage {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .titleImg {
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+    width: 70%;
+  }
+
+  .dontWait {
+    font-size: 3vw;
+  }
+
+  .hungry {
+    margin-top: 0rem;
+    font-size: 4vw;
+  }
+
+  .orderBtn {
+    font-size: 3vw;
+  }
+
+  .secondRow {
+    text-align: center;
+  }
+
+  .flex-container {
+    justify-content: space-evenly;
+  }
+}
+
+/* The container must be positioned relative: */
+
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none;
+  /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+/* Style the arrow inside the select element: */
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+
+.select-items div,
+.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+section.status .row div:nth-child(2) span {
+  background: #f8f8f8;
+  border-radius: 10px;
+  color: #FE5F1E;
+  text-align: justify;
+}
+
+li {
+  list-style-type: none;
+}
+
+.status_line {
+  padding: 5vw 0 0;
+  font-size: clamp(16px, 3vw, 34px);
+}
+
+.status-box div p:nth-child(2) {
+  font-size: clamp(16px, 4vw, 34px);
+}
+
+.status-box ul li span {
+  position: relative;
+}
+
+.status-box ul li span:after {
+  content: "";
+  left: -19px;
+  top: 50%;
+  position: absolute;
+  background: #232323;
+  min-width: 10px;
+  min-height: 10px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  padding-left: 9px;
+  box-shadow: 0px 26px 2px 16px white;
+  margin-right: 3rem;
+}
+
+.status-box ul li {
+  position: relative;
+}
+
+.status-box ul li:before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  width: 2px;
+  height: 88%;
+  background: #232323;
+  margin-top: 22px;
+}
+
+.status-box ul li:nth-child(5):before {
+  width: 0px;
+  background: white;
+}
+
+.actived_class {
+  color: #b8b8b8;
+}
+
+.status-box ul li.actived_class:before,
+.status-box ul li.actived_class span:after {
+  background: #b8b8b8;
+}
+
+.status-box ul li.current:before,
+.status-box ul li.current span:after {
+  background: orangered;
+}
+
+.status-box ul li.current {
+  color: orangered;
+}
+
+.successMessage {
+  float: right;
+  position: fixed;
+  margin-left: 67vw;
+  background: orangered;
+  padding: 7px;
+  margin-top: 11px;
+  border-radius: 14px;
+  color: white;
+}
+

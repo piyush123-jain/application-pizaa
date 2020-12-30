@@ -1,0 +1,37 @@
+
+<section class="status">
+
+    <div class="container " style=" margin: 0px auto">
+        <div class="row status-box">
+            <div  class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+            <p class="successMessage">Order Update</p>
+         
+    
+                <p> <span><%=order._id%> </span>
+                    <input type="hidden" id="hidden_value" value="<%= JSON.stringify(order)%>">
+                </p>
+                <p>Tracker Delivery Status</p>
+                <ul>
+                    <li class="status_line" data-status="order_placed" >
+                        <span> Order Placed</span>
+                    </li>
+                    <li class="status_line" data-status="confirmed">
+                        <span> Order Confirmation</span>
+                    </li>
+                    <li class="status_line" data-status="prepared">
+                        <span> Prepared </span>
+                    </li>
+                    <li class="status_line" data-status="delivered">
+                        <span> Delivred</span>
+                    </li>
+                    <li class="status_line" data-status="completed">
+                        <span> Completed</span>
+                    </li>
+                </ul>
+                
+
+            </div>
+            
+        </div>
+    </div>
+</section>

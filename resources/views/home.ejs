@@ -1,0 +1,64 @@
+
+<div class="container-fluid">
+<% if(messages.success){%>
+    <p class="successMessage"><%= messages.success %></p>
+    <%}%>
+ <div class="row header" >
+    
+        <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
+            <img src="/img/pizaa.png" 
+                 class="titleImg float-sm-right mx-5 
+                        float-lg-left float-md-left
+                        float-xs-left" alt="">
+
+        </div>
+        <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
+            <div class="row secondRow">
+
+                <div class="hungry col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div >Are You Hungry!</div>
+                    
+                </div>
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    
+        <div class="dontWait">
+
+            <em >Don't Wait</em>
+        </div>
+    </div>
+                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                        
+                    <button  class="orderBtn" >Order Now</button>            
+                    </div>
+                </div>
+        </div>
+      
+</div>
+<!-- menu section start -->
+<div class="row" id="scroll_to_order">
+
+    
+    <div class="item_add_to_cart">Item Added to cart</div>
+    <div class="item_add_to_cart_error">Something goes wrong</div>
+    
+
+    <!-- fetc data from server with express layout  -->
+    <% pizaas.forEach(function(pizza){ %>
+        <div class="col-md-3 col-lg-3">
+            <div class="flex-container" >
+                <div class="flex-item-left" >
+                    <img src="/img/<%= pizza.image %>" width="200" height="auto" alt="">
+                </div>
+                <div class="flex-item-right" >
+                    <p ><%= pizza.name %></p>
+                    <p class="text-muted"><%= pizza.size %></p>
+                        <span class="amount">&#8377&nbsp;&nbsp;<%= pizza.price %> </span>
+                        <span data-pizaa="<%= JSON.stringify(pizza)%>" class="add_to_cart">Add to cart</span>
+                    </div>
+                </div>    
+            </div>
+            <%        })%>
+            
+        </div>
+        
+        <!-- menu section end -->
