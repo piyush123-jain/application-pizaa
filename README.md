@@ -15,4 +15,6 @@ and start larvel mix for webpack
 
 npm run watch 
 
-after you complete all this given step 
+after you complete all this given step<br> 
+hit on your browser <br>
+'localhost:3100'
